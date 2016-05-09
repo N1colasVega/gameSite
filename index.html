@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="ext-core.js"></script>
+    <script type="text/javascript"
+            src="jquery.min.js"></script>
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <title>Кино</title>
+</head>
+
+<body id="body1" >
+<h1 style="font-size: 45pt">Игровой Портал</h1>
+<p>
+    Приветствуем на нашем Web-сайте <DFN>"Игровой Портал"</DFN>.<BR>На нем вы сможете ознакомится
+    с самыми лучшими и популярными играми.
+</p>
+<div id="cnavbar">
+ <ul id="navbar" >
+     <li><a href="tags/bestFilm.html" style="text-decoration: none; color: antiquewhite">Лучшие игры</a></li>
+     <li><a href="tags/bestActor.html" style="text-decoration: none; color: antiquewhite;">Лучшие разработчики</a></li>
+     <li><a href="tags/interestingAboutFilm.html" style="text-decoration: none; color: antiquewhite;">Интересные факты об играх </a></li>
+     <li><a href="tags/aboutCinema.html" style="text-decoration: none; color: antiquewhite;">О играх</a></li>
+ </ul>
+</div>
+
+<div  style="position: absolute; bottom: 170px; right: 800px;height:220px;clear: right;">
+    <img src="images/slide/warf.jpg" alt="" id="slide_show" width="650" height="400"><br>
+</div>
+
+<div id="ccopyright"> <address id ="poz" align="right">&#0169;Все права защищены.</address> </div>
+<script src="colorDrawn.js"></script>
+
+<script type="text/javascript">
+    var imgs = ["images/slide/warf.jpg","images/slide/with.jpg","images/slide/tribes.jpg","images/slide/batel.jpg"];
+    var text = ['Картинка 1','Картинка 2',
+        'Картинка 3','Картинка 4'];
+    var n=0;
+    time=800;
+    play=setInterval("chgImg(0)", 5000);
+
+    function chgImg(number) {
+        if (number!=0) n=number-2;
+        $('#slide_show').fadeOut(time, function() {    //для картинок
+            $(this).attr('src', imgs[n]).fadeIn(time);
+        });
+
+        $('#slide_text').fadeOut(time, function() {    //для текста
+            $(this).html(text[n]).fadeIn(time);
+        });
+
+        n++;
+        if (n>=imgs.length) n=0;
+    }
+</script>
+</body>
+
+</html>

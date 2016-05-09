@@ -1,0 +1,39 @@
+#body1 { color: #3B4043;
+    background-color: #F8F8F8;
+    background-image: url("images/origin4.png");
+    background-size: cover;
+    background-attachment: scroll;
+    font-family: Verdana, Arial, sans-serif
+}
+P        { font-size: 12pt;
+           color: beige; }
+H1, H2, H6  { font-weight: normal;
+    font-family: Arial, sans-serif
+}
+H1 { font-size: 20pt ; color:brown;  position: relative;  top: -32px;  }
+H2 { font-size: 18pt }
+H6 { font-size: 12pt }
+TABLE { font-size: 10pt }
+BLOCKQUOTE P,
+ADDRESS { font-size: 10pt;
+    font-style: italic
+}
+#screne{
+    width: 65%;
+    float: right;
+
+}
+a{
+    text-decoration: none;
+}
+#cheader {
+    width: 100% ;
+}
+#poster {
+    width: 30%;
+    min-width: 240px;
+    float: left
+}
+#return{
+    clear: left
+}
